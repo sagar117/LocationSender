@@ -9,17 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
 public class MyActivity extends Activity {
     public static String LOG_TAG = "Mylog";
     public static String DIR_SD = "LocationData";
     public static String FILENAME_SD = "log.txt";
     public static String absolutePath = Environment.getExternalStorageDirectory()+"/"+ MyActivity.DIR_SD+"/"+MyActivity.FILENAME_SD;
     public static String android_id;
-    public static String login="123";
-    public static String pass="asd";
+    public static String login;
+    public static String passHashMD5;
     SendFileService sfService = new SendFileService();
     Intent intentGetLocationService;
     Intent intentSendFileService;
@@ -30,7 +27,13 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.programm);
+
+        //Получаем параметры от формы авторизации
+        Intent i = getIntent();
+        login = i.getExtras().getString("login");
+        passHashMD5 = Data.md5(i.getExtras().getString("pass"));
+
 
         android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 

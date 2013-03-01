@@ -23,7 +23,7 @@ public class ThreadSendFile extends Thread {
         int maxBufferSize = 1*1024*1024;
 
         String pathToOurFile = pathTofile;
-        String urlServer = "http://gps.goldns.ru/input.php?login="+MyActivity.login+"&pass="+MyActivity.pass+"&id="+MyActivity.android_id;
+        String urlServer = "http://gps.goldns.ru/input.php?login="+MyActivity.login+"&pass="+MyActivity.passHashMD5+"&id="+MyActivity.android_id;
         String lineEnd = "\r\n";
         String twoHyphens = "--";
         String boundary =  "*****";
