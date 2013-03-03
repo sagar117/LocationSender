@@ -86,6 +86,8 @@ public class GetLocationService extends Service {
         String string = calendar.getTimeInMillis()+":"+location.getLatitude()+":"+location.getLongitude()+":"+location.getAltitude()+":"+location.getAccuracy()+"\n";
 
         try {
+            File f= new File(MyActivity.absolutePath.replace(MyActivity.FILENAME_SD,""));
+            f.mkdirs();
             // открываем поток для записи
             BufferedWriter bw = new BufferedWriter(new FileWriter(MyActivity.absolutePath,true));
             // пишем данные
