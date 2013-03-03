@@ -10,7 +10,9 @@ target/
 
 .apk
 .class
-out/
+out/*
+out\*
+
 *.apk
 *.class
 
