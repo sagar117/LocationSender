@@ -16,3 +16,6 @@
 *.class
 .idea/*
 *.iml
+.class
+.apk
+
