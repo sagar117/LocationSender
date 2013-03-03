@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.*;
 
 public class MyActivity extends Activity {
-    public static String LOG_TAG = "Mylog";
+    public static String LOG_TAG = "LocationLog";
     public static String DIR_SD = "LocationData";
     public static String FILENAME_SD = "log.txt";
     public static String absolutePath = Environment.getExternalStorageDirectory()+"/"+ MyActivity.DIR_SD+"/"+MyActivity.FILENAME_SD;

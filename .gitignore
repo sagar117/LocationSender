@@ -7,9 +7,12 @@
 .DS_Store
 log/
 target/
+
+.apk
+.class
+out/
 *.apk
 *.class
-
 
 #################
 ## Eclipse
