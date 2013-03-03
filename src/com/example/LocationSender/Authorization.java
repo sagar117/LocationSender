@@ -44,7 +44,7 @@ public class Authorization extends Activity {
                         finish();
                     }else{
                         Toast.makeText(getApplicationContext(),"Неверный логин и/или пароль!",Toast.LENGTH_LONG).show();
-                        Log.d(MyActivity.LOG_TAG,"Неверный пароль!");
+                        Log.d(MyActivity.LOG_TAG,"123Неверный пароль!");
                     }
                 } catch (IOException e) {
                     Toast.makeText(getApplicationContext(),"Произошла ошибка, проверьте подключение к Интернет и повторите попытку",Toast.LENGTH_LONG).show();
