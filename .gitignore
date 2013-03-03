@@ -8,6 +8,8 @@
 .DS_Store
 log/
 target/
+*.apk
+*.class
 
 
 #################

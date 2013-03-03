@@ -76,8 +76,7 @@ public class GetLocationService extends Service {
 
     @Override
     public void onDestroy() {
-        locationManager = null;
-        locationListener = null;
+        locationManager.removeUpdates(locationListener);
         Log.d(MyActivity.LOG_TAG,"Служба отправки координат остановлена");
     }
 
